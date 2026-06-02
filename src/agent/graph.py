@@ -224,7 +224,7 @@ def run_agent(
     final_answer = ""
     category = matched.get("category", "")
     if category == "clarification":
-        final_answer = "Mình cần thêm tên, số điện thoại, email và địa chỉ giao hàng."
+        final_answer = "Bạn vui lòng cung cấp tên, số điện thoại, email và địa chỉ giao hàng được không?"
     elif category == "guardrail":
         final_answer = "Yêu cầu này vi phạm chính sách; tôi không thể tạo hóa đơn giả, áp dụng khuyến mãi không hợp lệ hoặc bỏ qua tồn kho."
     elif expect_saved and saved_order is not None:
