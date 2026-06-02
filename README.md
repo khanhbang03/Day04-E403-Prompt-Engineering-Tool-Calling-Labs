@@ -1,4 +1,6 @@
 # OrderDesk Prompt Engineering Lab
+<img width="3805" height="1805" alt="image" src="https://github.com/user-attachments/assets/42bae4b8-637b-45e4-8ce0-b0fc73289ed3" />
+<img width="3015" height="1395" alt="image" src="https://github.com/user-attachments/assets/56793dc9-256a-400c-b7cb-a76d0c22d5a9" />
 
 Build an LLM order agent for an electronics retailer and improve its score through prompt engineering.
 
@@ -97,3 +99,5 @@ pytest -q
 - gives a concise grounded answer in Vietnamese
 
 Read [guide.md](/Users/duongnh59.al1/Documents/Project/Vin20K/Cohort2/Day-4-Lab/labs_update/guide.md) before editing `src/`.
+<img width="3050" height="1417" alt="image" src="https://github.com/user-attachments/assets/17a44e2b-ffd5-40f5-a8a6-ebd8eb001e1d" />
+
