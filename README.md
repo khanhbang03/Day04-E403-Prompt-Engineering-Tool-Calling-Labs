@@ -42,6 +42,12 @@ The main goal is not just to make the code run. The goal is to improve agent beh
 
 ## Setup
 
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 Create a `.env` file:
 
 ```bash
@@ -54,6 +60,12 @@ Optional local model:
 ```bash
 OLLAMA_MODEL=qwen3.5:3b
 OLLAMA_BASE_URL=http://localhost:11434
+```
+
+To run tests, install pytest if needed:
+
+```bash
+pip install pytest
 ```
 
 ## Commands

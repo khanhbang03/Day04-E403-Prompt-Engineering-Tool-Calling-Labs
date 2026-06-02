@@ -139,8 +139,19 @@ def run_agent(
         model_name=model_name,
         today=today,
     )
-    response = agent.invoke({"messages": [{"role": "user", "content": query}]})
-    messages = response["messages"] if isinstance(response, dict) else response
+    try:
+        response = agent.invoke({"messages": [{"role": "user", "content": query}]})
+        messages = response["messages"] if isinstance(response, dict) else response
+    except Exception as e:  # graceful fallback on API/model errors
+        return AgentResult(
+            query=query,
+            final_answer=f"Error calling model: {type(e).__name__}: {str(e)}",
+            tool_calls=[],
+            provider=provider,
+            model_name=model_name,
+            saved_order=None,
+            saved_order_path=None,
+        )
     tool_calls = extract_tool_calls(messages)
     saved_order, saved_order_path = extract_saved_order(tool_calls)
     return AgentResult(
